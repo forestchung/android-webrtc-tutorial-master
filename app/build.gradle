@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    //compileSdkVersion 25
+    //buildToolsVersion "25.0.2"
+    compileSdkVersion 21
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "me.pntutorial.pnrtcblog"
+        //minSdkVersion 23
+       minSdkVersion 15
+       // targetSdkVersion 25
+       targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+       // testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+          //runProguard false
+          proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // TODO: Uncomment the following compilation lines
+   compile 'io.pristine:libjingle:9694@aar'
+   compile 'com.pubnub:pubnub-android:3.7.4'
+  compile 'me.kevingleason:pnwebrtc:1.0.6@aar'
+  //  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+  //      exclude group: 'com.android.support', module: 'support-annotations'
+  //  })
+   // testCompile 'junit:junit:4.12'
+}
